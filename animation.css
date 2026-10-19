@@ -1,0 +1,230 @@
+/* =========================================================
+   SURI × SHREYA
+   SHARED ANIMATIONS
+========================================================= */
+
+@keyframes loaderLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 180px;
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: .6;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes pageOut {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   STAGGER
+========================================================= */
+
+.reveal:nth-child(1) {
+    transition-delay: .05s;
+}
+
+.reveal:nth-child(2) {
+    transition-delay: .12s;
+}
+
+.reveal:nth-child(3) {
+    transition-delay: .19s;
+}
+
+.reveal:nth-child(4) {
+    transition-delay: .26s;
+}
+
+.reveal:nth-child(5) {
+    transition-delay: .33s;
+}
+
+.reveal:nth-child(6) {
+    transition-delay: .40s;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-content {
+    animation:
+        fadeUp 1.2s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+.page-hero > div {
+    animation:
+        fadeUp 1s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+
+/* =========================================================
+   STORY DOT
+========================================================= */
+
+.story-dot {
+    animation:
+        glowPulse 3s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.photo-memory img,
+.gallery-image img,
+.gallery-item img {
+    will-change: transform;
+}
+
+
+/* =========================================================
+   PAGE ENTER
+========================================================= */
+
+body {
+    animation:
+        fadeIn .6s ease both;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Letter — Suri × Shreya</title>
+
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animations.css">
+
+</head>
+
+<body>
+
+    <div class="page-loader">
+
+        <div class="loader-content">
+
+            <span>A LETTER FOR YOU</span>
+
+            <h1>
+                Something
+                <i>personal.</i>
+            </h1>
+
+            <div class="loader-line"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+            S<span>×</span>S
+        </a>
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="story.html">
+                Story
+            </a>
+
+            <a href="memories.html">
+                Memories
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="letter.html" class="active">
+                Letter
+            </a>
+
+        </nav>
+
+
+        <button class="menu-toggle">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <div class="mobile-menu">
+
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="memories.html">Memories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="letter.html">A Letter</a>
+
+    </div>
+
+
+    <div class="scroll-progress"></div>
+
+
+    <main>
+
+        <section class="letter-page">
+
+            <div class="letter-intro reveal">
+
+                <span class="section-label">
+                    A LETTER FOR YOU
+                </span>
+
+                <h1>
+                    Open this when<br>
+                    you have a moment.
+                </h1>
+
+                <p>
+                    A little piece of our friendship,
+                    written just for you.
+                </p>
+
+            </div>
+
+
+            <div
+                class="envelope-wrapper reveal"
+                id="envelopeWrapper"
+            >
+
+                <div
+                    class="envelope"
+                    id="envelope"
+                >
+
+                    <div
+                        class="letter-paper"
+                        id="letterPaper"
+                    >
+
+                        <div class="letter-paper-content">
+
+                            <div class="letter-small">
+                                TO MY BFF & BROTHER
+                            </div>
+
+                            <h2>
+                                Dear Suri,
+                            </h2>
+
+                            <p>
+                                Can you believe it's already been
+                                1.5 years since we met?
+                            </p>
+
+                            <p>
+                                What started as one ordinary meeting
+                                became one of the most special friendships
+                                in my life.
+                            </p>
+
+                            <p>
+                                Thank you for being my BFF, my brother,
+                                my strength, and my forever family.
+                                Thank you for all the little ways you care,
+                                even when you probably don't realize
+                                how much they mean to me.
+                            </p>
+
+                            <p>
+                                No matter how far apart we are,
+                                I hope you always know that you have
+                                a very special place in my life.
+                            </p>
+
+                            <p>
+                                Here's to all the memories we've already
+                                made — and all the ones still waiting
+                                for us.
+                            </p>
+
+                            <div class="letter-signature">
+                                Always your BFF,<br>
+                                <strong>Shreya ❤️</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="envelope-back"></div>
+
+
+                    <div class="envelope-front">
+
+                        <div class="envelope-name">
+                            Suri
+                            <span>×</span>
+                            Shreya
+                        </div>
+
+                    </div>
+
+
+                    <div class="envelope-flap"></div>
+
+                </div>
+
+
+                <button
+                    class="open-letter-btn"
+                    id="openLetterBtn"
+                >
+                    Open My Letter
+                    <span>✦</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+       <footer>
+
+        <div class="footer-logo">
+            S × S
+        </div>
+
+        <p>
+            More memories will be added here.
+        </p>
+
+    </footer>
+
+
+   <script src="js/main.js"></script>
+
+<script>
+/* =========================================================
+   LETTER PAGE
+   LOADER + ENVELOPE OPENING
+========================================================= */
+
+window.addEventListener("load", function () {
+
+    /* PAGE LOADER */
+
+    const loader = document.querySelector(".page-loader");
+
+    if (loader) {
+
+        setTimeout(function () {
+
+            loader.classList.add("loaded");
+
+        }, 900);
+
+    }
+
+
+    /* ENVELOPE */
+
+    const envelopeWrapper =
+        document.getElementById("envelopeWrapper");
+
+    const openLetterBtn =
+        document.getElementById("openLetterBtn");
+
+    if (envelopeWrapper && openLetterBtn) {
+
+        openLetterBtn.addEventListener("click", function () {
+
+            envelopeWrapper.classList.toggle("open");
+
+
+            if (envelopeWrapper.classList.contains("open")) {
+
+                openLetterBtn.innerHTML =
+                    'Close My Letter <span>✦</span>';
+
+            } else {
+
+                openLetterBtn.innerHTML =
+                    'Open My Letter <span>✦</span>';
+
+            }
+
+        });
+
+    }
+
+});
+</script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
